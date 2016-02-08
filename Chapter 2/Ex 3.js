@@ -10,7 +10,6 @@ var chessBoard = function (height, width){
         }else {
           rv += '#'
         }
-
       }
       console.log(rv);
     }else{
@@ -23,9 +22,6 @@ var chessBoard = function (height, width){
     }
     console.log(rv);
   }
-
-
-
 }
 return;
 }
