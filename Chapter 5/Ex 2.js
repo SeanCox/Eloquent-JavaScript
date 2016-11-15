@@ -12,12 +12,12 @@ ancestry.forEach(function(person) {
   byName[person.name] = person;
 });
 
-let ages = []
-ancestry.forEach((person)=>{
-  if(byName[person.mother]){
-    ages.push(person.born - byName[person.mother].born)
-  }
+let ages = ancestry.filter((person)=>{
+  return byName[person.mother]
 })
+ .map((person)=>{
+   return person.born - byName[person.mother].born
+ })
 
 console.log(average(ages))
 // → 31.2
